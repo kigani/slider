@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Slider</title>
+    <link href="dist/assets/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="c-main__content">
+    <div class="c-slider js-slider" id="slider">
+        <div id="sliderOverlay">
+            <button aria-label="Previous" class="c-slider__button c-slider__button--prev"  id="sliderButtonPrev">
+                <span class="u-hidden-visually">Previous slide</span>
+                <svg class="c-icon c-icon--big">
+                    <use xlink:href="dist/assets/images/icons.svg#arrow-left"/>
+                </svg>
+            </button>
+            <ul class="c-slider__list o-list-bare" id="sliderList">
+                <li class="c-slider__list-item o-list-bare__item">
+                    <figure class="c-slider__figure c-loader">
+                        <img class="c-slider__image" src="" data-src="src/assets/images/image_01.jpg" alt="1_image" />
+                    </figure>
+                </li>
+                <li class="c-slider__list-item o-list-bare__item">
+                    <figure class="c-slider__figure c-loader">
+                        <img class="c-slider__image" src="" data-src="src/assets/images/600.jpeg" alt="2_image" />
+                    </figure>
+                </li>
+                <li class="c-slider__list-item o-list-bare__item">
+                    <figure class="c-slider__figure c-loader">
+                        <img class="c-slider__image" src="" data-src="src/assets/images/image_01.jpg" alt="3_image" />
+                    </figure>
+                </li>
+                <li class="c-slider__list-item o-list-bare__item">
+                    <figure class="c-slider__figure c-loader">
+                        <img class="c-slider__image" src="" data-src="src/assets/images/600.jpeg" alt="6_image" />
+                    </figure>
+                </li>
+                <li class="c-slider__list-item o-list-bare__item">
+                    <figure class="c-slider__figure c-loader">
+                        <img class="c-slider__image" src="" data-src="src/assets/images/600.jpeg" alt="7_image" />
+                    </figure>
+                </li>
+            </ul>
+            <button aria-label="Next" class="c-slider__button c-slider__button--next" id="sliderButtonNext">
+                <span class="u-hidden-visually">Next slide</span>
+                <svg class="c-icon c-icon--big">
+                    <use xlink:href="dist/assets/images/icons.svg#arrow-right"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+    <script src="dist/assets/scripts/slider.js"></script>
+</body>
+</html>

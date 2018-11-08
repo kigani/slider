@@ -1,0 +1,37 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+
+$inuit-wrapper-width: 70rem;
+
+$color-lightest: #ffffff;
+$color-light: #fafafa;
+$color-darkest: #000000;
+
+$color-blue: #47b2fa;
+
+$color-grey: #8f9aa9;
+$color-grey-dark: #4a4a4a;
+$color-grey-light: #7d7d7d; //lighter by 20% of #4a4a4a
+$color-grey-lightest: #dce1e5;
+
+$inuit-fractions: 12;
+$inuit-offsets: true;
+
+
+$mq-breakpoints: (
+        mobileLandscape: 481px,
+        tablet: 769px,
+        desktop: 1025px,
+);
+
+$text-color: $color-grey-dark;
+$text-color-light: $color-grey-light;
+$text-color-inverted: $color-lightest;
+$border-color: $color-grey-lightest;
+$background-color: $color-lightest;
+$background-color-dark: $color-darkest;
+$background-color-secondary: $color-grey-lightest;

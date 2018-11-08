@@ -1,0 +1,128 @@
+$background-color-primary: rgba(0, 0, 0, .9);
+$backgorund-color-secondary: rgba($color-grey-dark, .9);
+
+.c-slider {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  background-color: $background-color-dark;
+
+  &__button {
+    align-self: flex-start;
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: $backgorund-color-secondary;
+    color: $text-color-inverted;
+    z-index: 1000;
+    transition: background-color .4s ease;
+
+    svg {
+      @include mq($until: tablet) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+
+    &[disabled] {
+      display: none;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 0 2px $color-blue;
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken($backgorund-color-secondary, 20%);
+    }
+
+    &--next {
+      right: 0;
+    }
+
+    &--prev,
+    &--next {
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2rem;
+      height: 3rem;
+
+      @include mq($until: mobileLandscape) {
+        display: none;
+      }
+
+      @include mq($from: tablet) {
+        width: 3rem;
+        height: 4rem;
+      }
+    }
+
+    &--close {
+      top: 0;
+      right: 0;
+      width: 2rem;
+      height: 2rem;
+
+      @include mq($from: tablet) {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+
+  &__list {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    &--animate {
+      transition: transform .4s ease;
+    }
+
+    &-item {
+      display: block;
+      position: relative;
+      text-align: center;
+      flex: 1 0 auto;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  &__figure {
+    margin: 0 auto;
+    max-height: calc(100vh - 2rem); //set max height to viewport height - overlay margins
+    max-width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include mq($from: mobileLandscape) {
+      max-width: calc(100% - 8rem); //set max width to 100% - space taken by buttons
+    }
+
+    &.c-loader img,
+    &.c-loader figcaption {
+      display: none;
+    }
+  }
+
+  &__image {
+    display: block;
+  }
+}
